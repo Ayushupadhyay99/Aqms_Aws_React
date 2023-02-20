@@ -69,6 +69,7 @@ class GetDataList extends Component {
                  <div>
 
                       <h2>AQMS Data   </h2>
+                      <div  className="navbar-brand"><h6># represent sensor is damaged/malfunctioning   </h6></div>
                       <div rounded className='mx-2' color='secondary'>
                      <MDBDropdown>
                       <MDBDropdownToggle color='secondary'> {selectedFloorName}</MDBDropdownToggle>
