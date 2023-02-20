@@ -1,9 +1,7 @@
 import axios from 'axios'
 
-const USERS_REST_API_URL = 'http://aqmsaws-env.eba-p4pdeysp.ap-northeast-1.elasticbeanstalk.com/api/v1/CompleteDatalist';
-const USERS_REST_API_URL1 = 'http://aqmsaws-env.eba-p4pdeysp.ap-northeast-1.elasticbeanstalk.com/api/v1/CarbonDioxideData';
-const USERS_REST_API_URL2 = 'http://aqmsaws-env.eba-p4pdeysp.ap-northeast-1.elasticbeanstalk.com/api/v1/dustparticalData';
-const SEND_EMAIL = 'http://aqmsaws-env.eba-p4pdeysp.ap-northeast-1.elasticbeanstalk.com/api/v1/sendEmail';
+const USERS_REST_API_URL = 'http://aqmsaws-env.eba-p4pdeysp.ap-northeast-1.elasticbeanstalk.com/api/v1';
+
 
 class UserService {
 
@@ -12,14 +10,14 @@ class UserService {
      * @returns  url of completeData api
      */
     getList(){
-        return axios.get(USERS_REST_API_URL);
+        return axios.get(USERS_REST_API_Base_URL +'/CompleteDatalist');
     }
     /**
      * sends a GET request to the REST API endpoint
      * @returns url of ozonneData api
      */
     getOzoneData(){
-        return axios.get(USERS_REST_API_URL2);
+        return axios.get(USERS_REST_API_Base_URL + '/dustparticalData');
     }
     /**
      * sends a GET request to the REST API endpoint 
@@ -27,14 +25,14 @@ class UserService {
      */
 
     getCarbonDioxideData(){
-        return axios.get(USERS_REST_API_URL1);
+        return axios.get(USERS_REST_API_Base_URL + '/CarbonDioxideData');
     }
     /**
      * sends a post request to the REST API endpoint
      * @returns url of notification post method
      */
     sendEmail(){
-        return axios.post(SEND_EMAIL);
+        return axios.post(USERS_REST_API_Base_URL + '/sendEmail');
     }
 }
 
