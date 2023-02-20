@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const USERS_REST_API_URL = 'http://aqmsaws-env.eba-p4pdeysp.ap-northeast-1.elasticbeanstalk.com/api/v1';
+const USERS_REST_API_Base_URL = 'http://aqmsaws-env.eba-p4pdeysp.ap-northeast-1.elasticbeanstalk.com/api/v1';
 
 
 class UserService {
